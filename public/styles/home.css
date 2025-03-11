@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+main{
+  display: inline-block;
+  background-color: whitesmoke;
+  width: 18rem;
+  padding: 1rem;
+  margin-top:2rem;
+  font-size: .8rem;
+  border-radius: .2rem;
+  box-shadow:.1rem .1rem .2rem .2rem grey;
+}
+
+header{
+  font-size: smaller;
+  text-align: center;
+}
+
+legend{
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+form div{
+  margin-bottom: .8rem;
+}
+
+#type, #duration, #date, #notes{
+  width: 100%;
+  border-radius: .2rem;
+  border: .1rem, solid lightgray;
+  padding: .3rem;
+  font-size: smaller;
+}
+
+#intensityDiv{
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+button{
+  width: 100%;
+  background-color: green;
+  color: white;
+  border-radius: .2rem;
+  border: none;
+  padding: .3rem;
+  font-size: .75rem;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="icon" type="image/png" href="images/run.png">
+  <title>Personal Fitness Tracker</title>
+</head>
+<body>
+  <main>
+    <header>
+      <h2>Personal Fitness Tracker</h2>
+    </header>
+    
+    <form action="/summary" method ="post">
+      <div>
+        <legend>Workout Type:</legend>
+        <select id="type" name="type" required>
+          <option value=>-- Select a Workout --</option>
+          <option value="Running"> Running </option>
+          <option value="Weightlifting"> Weightlifting </option>
+          <option value="Yoga"> Yoga </option>
+          <option value="Cycling"> Cycling </option>
+          <option value="Other"> Other </option>
+        </select>
+      </div>
+
+      <div>
+        <legend>Duration (minutes):</legend>
+        <label>
+          <input id=duration name= duration type ="number" min="0" required>
+        </label>
+      </div>
+    
+      <div>
+        <legend>Intensity Level:</legend>
+        <div id="intensityDiv">
+        <label>
+          <input name= intensity type ="radio" value="Low" required>Low
+        </label>
+        <label>
+          <input name= intensity type ="radio" value="Medium" required>Medium
+        </label>
+        <label>
+          <input name= intensity type ="radio" value="High" required>High
+        </label>
+        </div>
+      </div>
+    
+      <div>
+        <legend>Date:</legend>
+        <label>
+        <input id="date" name="date" type="date" required>
+        </label>
+      </div>
+    
+      <div>
+        <legend>Notes:</legend>
+        <label>
+        <textarea id="notes" name="notes" type="text" rows="4" placeholder="Additional comments..."></textarea>
+        </label>
+      </div>
+    
+      <button id="logButton" type ="submit">Log Workout</button>
+
+    </form>
+    </main>
+  
+</body>
+</html>
