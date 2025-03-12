@@ -5,64 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/home.css">
   <link rel="icon" type="image/png" href="images/run.png">
+  <script src="scripts/client-validation.js" defer> </script>
   <title>Personal Fitness Tracker</title>
 </head>
+
 <body>
   <main>
     <header>
       <h2>Personal Fitness Tracker</h2>
     </header>
     
-    <form action="/summary" method ="post">
-      <div>
+    <form action="summary" method="post" id="workout-form">
+      
+      <fieldset>
         <legend>Workout Type:</legend>
-        <select id="type" name="type" required>
-          <option value=>-- Select a Workout --</option>
-          <option value="Running"> Running </option>
-          <option value="Weightlifting"> Weightlifting </option>
-          <option value="Yoga"> Yoga </option>
-          <option value="Cycling"> Cycling </option>
-          <option value="Other"> Other </option>
+        <select id="type" name="type">
+          <option value="none">-- Select a Workout --</option>
+          <option value="Running">Running</option>
+          <option value="Weightlifting">Weightlifting</option>
+          <option value="Yoga">Yoga</option>
+          <option value="Cycling">Cycling</option>
+          <option value="Other">Other</option>
         </select>
-      </div>
+        <span class="err" id="err-type">Please select a valid workout type.</span>
+      </fieldset>
 
-      <div>
+      <fieldset>
         <legend>Duration (minutes):</legend>
-        <label>
-          <input id=duration name= duration type ="number" min="0" required>
-        </label>
-      </div>
-    
-      <div>
+        <input id="duration" name="duration" type="text">
+        <span class="err" id="err-duration">Please enter a valid duration in minutes.</span>
+      </fieldset>
+      
+      <fieldset>
         <legend>Intensity Level:</legend>
         <div id="intensityDiv">
-        <label>
-          <input name= intensity type ="radio" value="Low" required>Low
-        </label>
-        <label>
-          <input name= intensity type ="radio" value="Medium" required>Medium
-        </label>
-        <label>
-          <input name= intensity type ="radio" value="High" required>High
-        </label>
+          <label><input name="intensity" type="radio" value="Low"> Low</label>
+          <label><input name="intensity" type="radio" value="Medium"> Medium</label>
+          <label><input name="intensity" type="radio" value="High"> High</label>
         </div>
-      </div>
-    
-      <div>
+        <span class="err" id="err-intensity">Please select a valid intensity level.</span>
+      </fieldset>
+        
+      <fieldset>
         <legend>Date:</legend>
-        <label>
-        <input id="date" name="date" type="date" required>
-        </label>
-      </div>
+        <input id="date" name="date" type="date">
+        <span class="err" id="err-date">Please select a valid date.</span>
+      </fieldset>
     
-      <div>
+       <fieldset>
         <legend>Notes:</legend>
-        <label>
-        <textarea id="notes" name="notes" type="text" rows="4" placeholder="Additional comments..."></textarea>
-        </label>
-      </div>
+        <textarea id="notes" name="notes" rows="4" placeholder="Additional comments..."></textarea>
+      </fieldset>
     
-      <button id="logButton" type ="submit">Log Workout</button>
+      <button type="submit">Log Workout</button>
 
     </form>
     </main>

@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 const PORT = 3000;
 
-const workoutList = []
+const workoutList = [];
 
 app.get('/', (req, res) => {
   res.render('home');

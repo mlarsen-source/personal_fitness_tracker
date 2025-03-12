@@ -18,17 +18,17 @@
       <div class="workout">
       <h3>Logged Workout:</h3>
       <hr>
-      <p> <b>Workout Type: </b> <%=workoutList[i].type %> </p>
-      <p> <b>Duration: </b> <%=workoutList[i].duration%> </p>
-      <p> <b>Intensity: </b> <%=workoutList[i].intensity %> </p>
-      <p> <b>Date:</b> <%=workoutList[i].date %> </p>
-      <p> <b>Notes:</b> <%=workoutList[i].notes %> </p>
+      <p><b>Workout Type:</b> <%=workoutList[i].type %> </p>
+      <p><b>Duration:</b> <%=workoutList[i].duration%> </p>
+      <p><b>Intensity:</b> <%=workoutList[i].intensity%> </p>
+      <p><b>Date:</b> <%=workoutList[i].date%> </p>
+      <p><b>Notes:</b> <%=workoutList[i].notes%> </p>
       </div>
     <% } %>
 
   </main>
   <form action="/" method ="get">
-    <button id="returnButton" type ="submit">Log Another Workout</button>
+    <button type="submit">Log Another Workout</button>
   </form>
   
 </body>

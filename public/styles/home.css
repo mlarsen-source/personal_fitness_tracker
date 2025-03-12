@@ -33,9 +33,13 @@ legend{
   margin-bottom: .5rem;
 }
 
-form div{
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
   margin-bottom: .8rem;
 }
+
 
 #type, #duration, #date, #notes{
   width: 100%;
@@ -60,4 +64,10 @@ button{
   border: none;
   padding: .3rem;
   font-size: .75rem;
+}
+
+.err{
+  color: red;
+  display: none;
+  font-size: smaller;
 }
